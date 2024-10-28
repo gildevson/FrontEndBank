@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import HeaderLogin from './components/headerLogin/HeaderLogin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/auth/Login';
 import Menu from './components/menu/Menu';
@@ -47,7 +46,6 @@ function Layout({ children }) {
 function App() {
     return (
         <Router>
-            {!isAuthenticated() && <HeaderLogin />}
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route 
