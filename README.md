@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+/frontend
+├── /public
+│   ├── index.html
+│   └── favicon.ico
+├── /src
+│   ├── /components          # Componentes principais do sistema
+│   │   ├── /auth             # Componentes relacionados à autenticação
+│   │   │   ├── Login.js      # Tela de login
+│   │   │   └── Login.css     # Estilos para o login
+│   │   ├── /menu             # Componentes relacionados ao menu
+│   │   │   ├── Menu.js       # Componente de menu principal
+│   │   │   └── Menu.css      # Estilos para o menu
+│   │   └── /shared           # Componentes reutilizáveis (botões, headers, etc.)
+│   ├── /assets               # Imagens, ícones e outros arquivos estáticos
+│   │   ├── /images
+│   │   └── /styles           # Arquivos CSS globais e estilos centralizados
+│   │       └── global.css
+│   ├── /services             # Funções que fazem requisições à API (backend)
+│   │   └── authService.js     # Serviço para autenticação e login
+│   ├── App.js                # Componente principal que organiza as rotas
+│   ├── App.css               # Estilos globais do App
+│   ├── index.js              # Arquivo que renderiza o App
+│   └── .env                  # Arquivo de ambiente para variáveis como URL da API
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+import React from 'react';
+import Login from './components/Login';
 
-In the project directory, you can run:
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <Login />
+            </header>
+        </div>
+    );
+}
 
-### `npm start`
+export default App;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+App.js e para ser assim? 
 
-### `npm test`
+ou 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/auth/Login';
+import Menu from './components/menu/Menu';
+import './App.css';
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function App() {
+    return (
+        <Router>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/menu" element={<Menu />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default App;

@@ -1,0 +1,432 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121214;
+    color: #E1E1E6;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Alinhamento horizontal centralizado */
+    align-items: flex-start;
+}
+
+/* Estilo para o layout da página */
+.main-content {
+    margin-left: 270px; /* Ajuste se houver uma barra lateral fixa */
+    width: 100%;
+    max-width: 1200px; /* Definindo uma largura máxima para centralizar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    padding-top: 10px;
+}
+
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+        padding-top: 20px;
+    }
+}
+
+/* Estilos para o formulário */
+.user-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3b3f50;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.user-form h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Inputs do formulário */
+.inputField {
+    margin-bottom: 15px;
+}
+
+.inputField label {
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.inputField input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Botão do formulário */
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a tabela */
+.user-table-container {
+    width: 100%;
+    max-width: 800px; /* Ajuste para manter a tabela centralizada */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f2430;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 400px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.user-table thead {
+    background-color: #3b3f50;
+    color: #fff;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #2a2d3e;
+}
+
+.user-table tbody tr:hover {
+    background-color: #343849;
+}
+
+/* Botão de excluir */
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+/* Estilo para o título e botão */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; /* Centraliza o botão e o título em relação à tabela */
+    margin-bottom: 20px;
+}
+
+.header-container h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Botão de criar usuário */
+.openFormButton {
+    background-color: #3d9039;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.openFormButton:hover {
+    background-color: #2a722a;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .header-container h2 {
+        font-size: 20px;
+    }
+
+    .openFormButton {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .user-table th, .user-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Ajustes de layout para grandes telas */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Estilo para o modal fullscreen */
+.fullscreen-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o formulário dentro do modal */
+.fullscreen-form .user-form {
+    background-color: #202024;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1001;
+}
+
+/* Ajuste para o ícone de fechar */
+.fullscreen-form .close-form-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1002;
+}
+
+.fullscreen-form .close-form-icon:hover {
+    color: #ff4d4f;
+}
+
+/* Ajuste do botão de envio */
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #374758;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo geral para desktop - sem mudanças */
+
+/* Ajustes específicos para telas menores (celular) */
+@media (max-width: 768px) {
+    /* Ajuste do layout principal */
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    /* Ajuste para o título e botão no header */
+    .header-container {
+        padding: 10px;
+    }
+
+    .header-container h2 {
+        font-size: 20px;
+    }
+
+    .openFormButton {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-left: 10px; /* Espaço entre o botão e o título */
+    }
+
+    /* Estilos para a tabela */
+    .user-table-container {
+        padding: 0 5px;
+    }
+
+    .user-table, .user-table thead, .user-table tbody, .user-table th, .user-table td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Ocultar colunas de cabeçalho para mobile */
+    .user-table thead {
+        display: none;
+    }
+
+    /* Tabela em formato de lista */
+    .user-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid #3b3f50;
+        margin-bottom: 10px;
+        background-color: #2a2d3e;
+    }
+
+    /* Exibir rótulos para cada célula */
+    .user-table tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+        color: #E1E1E6;
+        width: 30%; /* Largura do rótulo */
+    }
+
+    .user-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Ajuste do botão Excluir */
+    .deleteButton {
+        width: auto;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+        padding-left: 10px; /* Reduza o padding esquerdo */
+        padding-right: 10px;
+    }
+
+    .user-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #E1E1E6;
+        
+        margin-right: 8px; /* Espaço entre o rótulo e o valor */
+        display: inline-block;
+        width: 30%; /* Largura fixa para o rótulo */
+    }
+
+    /* Ajuste para o botão Excluir */
+    .deleteButton {
+        width: auto; /* Ajuste automático da largura do botão */
+        margin-top: 10px;
+    }
+}
+
+/* Ajustes específicos para telas menores (somente celular) */
+@media (max-width: 768px) {
+    /* Ajustes para o cabeçalho */
+    .header-container {
+        display: flex;
+        margin-top: 10%;
+        justify-content: space-between;
+        align-items: center; /* Centraliza verticalmente o título e o botão */
+        width: 100%;
+        padding: 10px 20px; /* Adiciona espaçamento interno para o cabeçalho */
+        background-color: #121214; /* Certifica-se de que o fundo do cabeçalho é consistente */
+    }
+
+    .header-container h2 {
+        font-size: 20px;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    /* Botão de criar usuário */
+    .openFormButton {
+        background-color: #3d9039;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-left: 10px; /* Espaço entre o botão e o título */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .openFormButton:hover {
+        background-color: #2a722a;
+    }
+}
+
+/* Tela de carregamento centralizada */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo com opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Coloca a tela de carregamento acima de tudo */
+}
+
+/* Estilo do spinner */
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

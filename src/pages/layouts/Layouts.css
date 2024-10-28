@@ -1,0 +1,74 @@
+/* Estilo geral do conteúdo */
+.layouts-content {
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Estilos para a barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 10px 8px 30px; /* Espaço para o ícone */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Estilos para a lista de layouts */
+.layouts-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.layout-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-item:last-child {
+    border-bottom: none;
+}
+
+.layout-item h3 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: bold;
+}
+
+.layout-item p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.download-link {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #2980b9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.download-link:hover {
+    color: #1c5d8f;
+}
