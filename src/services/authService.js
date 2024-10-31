@@ -6,19 +6,18 @@ export const login = async (email, password) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ email, password }),
+            credentials: 'include' // Adicione se precisar de cookies ou autenticação de sessão
         });
 
         if (!response.ok) {
-            // Exibe erro se houver problema com a requisição (por exemplo, credenciais inválidas)
             const errorData = await response.json();
             throw new Error(errorData.message || 'Erro ao fazer login.');
         }
 
-        // Retorna o token e os dados do usuário
         const data = await response.json();
         return data;
     } catch (error) {
         console.error('Erro ao fazer login:', error);
-        throw error; // Propaga o erro para ser tratado no frontend
+        throw error;
     }
 };
