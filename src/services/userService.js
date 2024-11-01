@@ -3,7 +3,7 @@
 // Função para criar usuário
 export async function createUser(user) {
     try {
-        const response = await fetch('https://backend-bank.vercel.app/api/users', {
+        const response = await fetch('https://bakend-bank.vercel.app/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export async function createUser(user) {
 // Função para buscar usuários
 export async function fetchUsers() {
     try {
-        const response = await fetch('https://backend-bank.vercel.app/api/users', {
+        const response = await fetch('https://bakend-bank.vercel.app/api/users', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -55,7 +55,7 @@ export async function fetchUsers() {
 // Função para deletar um usuário (para o botão de excluir)
 export async function deleteUser(userId) {
     try {
-        const response = await fetch(`https://backend-bank.vercel.app/api/users/${userId}`, {
+        const response = await fetch(`https://bakend-bank.vercel.app/api/users/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',
