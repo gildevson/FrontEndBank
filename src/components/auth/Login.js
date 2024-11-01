@@ -14,7 +14,7 @@ const Login = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://backend-bank.vercel.app/auth/login', {
+            const response = await fetch('https://bakend-bank.vercel.app/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
