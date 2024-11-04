@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Menu.css';
-import { FaHome, FaBook, FaBars, FaUserCircle, FaUserPlus, FaSignOutAlt, FaFileAlt } from 'react-icons/fa';
+import { FaHome, FaBook, FaBars, FaUserCircle, FaUserPlus, FaSignOutAlt, FaFileAlt, FaRuler } from 'react-icons/fa';
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,6 +101,12 @@ const Menu = () => {
                   <button onClick={() => handleNavigate('/add-user')} className="menu-link">Usuários</button>
                 </li>
               )}
+              
+                 <li>
+                 <FaRuler />
+                 <button onClick={() => handleNavigate('/verificadores')} className="menu-link">Usuários</button>
+               </li>
+              
             </ul>
 
             <ul className="menu-bottom">

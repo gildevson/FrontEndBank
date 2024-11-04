@@ -26,7 +26,7 @@ export async function createUser(user) {
         return await response.json(); // Retorna os dados do usuário criado
     } catch (error) {
         console.error('Erro ao criar usuário:', error);
-        throw error; // Propaga o erro para ser tratado por quem chamou essa função
+        throw error; // Propaga o erro para ser tratado por quem chamou essa funçãod
     }
 }
 
