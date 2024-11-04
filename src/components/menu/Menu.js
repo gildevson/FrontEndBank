@@ -15,19 +15,19 @@ const Menu = () => {
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     const storedPermission = localStorage.getItem('permission');
-  
+
     if (storedUsername && storedUsername !== 'undefined') {
       setUsername(storedUsername);
       setIsUserLoading(false); // Dados já disponíveis, não há necessidade de carregamento
     } else {
       setIsUserLoading(true); // Inicia o carregamento se os dados não estiverem disponíveis
     }
-  
+
     if (storedPermission) {
       const perm = parseInt(storedPermission, 10);
       setPermission(perm);
     }
-  
+
     if (!storedUsername || storedUsername === 'undefined') {
       setTimeout(() => {
         setIsUserLoading(false); // Finaliza o carregamento dos dados
@@ -101,12 +101,11 @@ const Menu = () => {
                   <button onClick={() => handleNavigate('/add-user')} className="menu-link">Usuários</button>
                 </li>
               )}
-              
-                 <li>
-                 <FaRuler />
-                 <button onClick={() => handleNavigate('/verificadores')} className="menu-link">Usuários</button>
-               </li>
-              
+              <li>
+                <FaRuler />
+                <button onClick={() => handleNavigate('/verificadores')} className="menu-link">verificadores</button>
+              </li>
+
             </ul>
 
             <ul className="menu-bottom">

@@ -88,6 +88,16 @@ function App() {
                         </PrivateRoute>
                     }
                 />
+                <Route 
+                    path="/verificadores" 
+                    element={
+                        <PrivateRoute>
+                            <Layout>
+                                <CreateUser />
+                            </Layout>
+                        </PrivateRoute>
+                    }
+                />
             </Routes>
         </Router>
     );
