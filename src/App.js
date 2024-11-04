@@ -48,18 +48,8 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Login />} />
-                <Route 
-                    path="/menu" 
-                    element={
-                        <PrivateRoute>
-                            <Layout>
-                                <Home />
-                            </Layout>
-                        </PrivateRoute>
-                    } 
-                />
-                <Route 
-                    path="/home" 
+                <Route
+                    path="/menu"
                     element={
                         <PrivateRoute>
                             <Layout>
@@ -68,8 +58,18 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-                <Route 
-                    path="/layouts" 
+                <Route
+                    path="/home"
+                    element={
+                        <PrivateRoute>
+                            <Layout>
+                                <Home />
+                            </Layout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/layouts"
                     element={
                         <PrivateRoute>
                             <Layout>
@@ -78,8 +78,8 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-                <Route 
-                    path="/add-user" 
+                <Route
+                    path="/add-user"
                     element={
                         <PrivateRoute>
                             <Layout>
@@ -88,12 +88,12 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-                <Route 
-                    path="/verificadores" 
+                <Route
+                    path="/verificadores"
                     element={
                         <PrivateRoute>
                             <Layout>
-                                <CreateUser />
+                                <Home />
                             </Layout>
                         </PrivateRoute>
                     }
