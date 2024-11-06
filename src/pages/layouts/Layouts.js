@@ -12,7 +12,7 @@ const Layouts = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filtra a lista de layouts com base no termo de pesquisa
+  // Filtra a lista de layouts com base no termo de pesquisa .
   const filteredLayouts = layouts.filter(layout =>
     layout.nomeBanco.toLowerCase().includes(searchTerm.toLowerCase())
   );
