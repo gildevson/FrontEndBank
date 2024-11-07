@@ -4,61 +4,61 @@
     margin: 0 auto;
     font-family: Arial, sans-serif;
     color: #333;
-}
-
-.search-bar {
+  }
+  
+  .search-bar {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     position: relative;
-}
-
-.search-bar input {
+  }
+  
+  .search-bar input {
     width: 100%;
     padding: 8px 10px 8px 30px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 0.9rem;
-}
-
-.search-icon {
+  }
+  
+  .search-icon {
     position: absolute;
     left: 10px;
     font-size: 1.2rem;
     color: #aaa;
-}
-
-.layouts-list {
+  }
+  
+  .layouts-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-.layout-item {
+  }
+  
+  .layout-item {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-}
-
-.layout-item:last-child {
+  }
+  
+  .layout-item:last-child {
     border-bottom: none;
-}
-
-.layout-item h3 {
+  }
+  
+  .layout-item h3 {
     font-size: 1rem;
     color: #2c3e50;
     margin: 0;
     font-weight: bold;
-}
-
-.layout-item p {
+  }
+  
+  .layout-item p {
     margin: 2px 0;
     font-size: 0.9rem;
     color: #555;
-}
-
-.download-link {
+  }
+  
+  .download-link {
     margin-top: 4px;
     font-size: 0.9rem;
     color: #2c3e50;
@@ -69,10 +69,11 @@
     border-radius: 4px;
     display: inline-block;
     text-align: center;
-}
-
-.download-link:hover {
+  }
+  
+  .download-link:hover {
     background-color: #f0f0f0;
     color: #2c3e50;
     border-color: #bbb;
-}
+  }
+  
