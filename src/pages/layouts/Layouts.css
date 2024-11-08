@@ -10,13 +10,6 @@
   box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3);
 }
 
-/* Título */
-h2 {
-  color: #00ff00;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
 
 /* Barra de pesquisa */
 .search-bar {
