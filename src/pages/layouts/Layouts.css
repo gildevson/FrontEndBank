@@ -1,32 +1,31 @@
 /* Container principal */
 .layouts-content {
   padding: 20px;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   background-color: #121212;
-  color: #00ff00; /* Ajuste a cor conforme desejado */
+  color: #00ff00;
   font-family: Arial, sans-serif;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3);
 }
 
-
 /* Barra de pesquisa */
 .search-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   position: relative;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #222;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .search-bar input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 10px 35px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #333;
   color: #ddd;
   font-size: 1rem;
@@ -43,13 +42,13 @@
 .layouts-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 1rem;
 }
 
 .layouts-table th, .layouts-table td {
   padding: 12px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #444;
 }
 
@@ -57,12 +56,10 @@
   background-color: #1e1e1e;
   color: #00ff00;
   font-weight: bold;
-  text-align: center;
 }
 
 .layouts-table td {
   color: #ddd;
-  text-align: center;
 }
 
 .layouts-table tr:nth-child(even) {
@@ -78,11 +75,12 @@
   color: #000;
   background-color: #00ff00;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: inline-block;
 }
 
 .download-link:hover {
