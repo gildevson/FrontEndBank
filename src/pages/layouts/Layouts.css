@@ -3,11 +3,11 @@
   padding: 20px;
   max-width: 700px;
   margin: 0 auto;
-  background-color: #121212;
-  color: #00ff00;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   font-family: Arial, sans-serif;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Barra de pesquisa */
@@ -17,7 +17,7 @@
   margin-bottom: 20px;
   position: relative;
   border-radius: 8px;
-  background-color: #222;
+  background-color: #333;
   padding: 5px 10px;
 }
 
@@ -26,8 +26,8 @@
   padding: 10px 10px 10px 35px;
   border: none;
   border-radius: 8px;
-  background-color: #333;
-  color: #ddd;
+  background-color: #444;
+  color: #e0e0e0;
   font-size: 1rem;
 }
 
@@ -35,7 +35,7 @@
   position: absolute;
   left: 10px;
   font-size: 1.2rem;
-  color: #00ff00;
+  color: #888;
 }
 
 /* Tabela de layouts */
@@ -49,21 +49,21 @@
 .layouts-table th, .layouts-table td {
   padding: 12px;
   text-align: center;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #555;
 }
 
 .layouts-table th {
-  background-color: #1e1e1e;
-  color: #00ff00;
+  background-color: #2d2d2d;
+  color: #00aaff; /* Um tom azul para um visual mais moderno */
   font-weight: bold;
 }
 
 .layouts-table td {
-  color: #ddd;
+  color: #e0e0e0;
 }
 
 .layouts-table tr:nth-child(even) {
-  background-color: #1b1b1b;
+  background-color: #242424;
 }
 
 .layouts-table tr:hover {
@@ -72,26 +72,42 @@
 
 /* Botão de download */
 .download-link {
-  color: #000;
-  background-color: #00ff00;
+  color: #fff;
+  background-color: #00aaff;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   display: inline-block;
 }
 
 .download-link:hover {
-  background-color: #00cc00;
-  color: #fff;
+  background-color: #008ecc; /* Um tom de azul mais escuro no hover */
 }
 
 /* Ajuste adicional para o layout */
 .container-box {
-  border: 2px solid #00ff00;
+  border: 2px solid #00aaff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.2);
+  box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .layouts-content {
+    padding: 15px;
+  }
+
+  .layouts-table th, .layouts-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .download-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
 }
