@@ -89,7 +89,7 @@ const Menu = () => {
               </li>
               <li>
                 <FaFileAlt />
-                <button onClick={() => handleNavigate('/ocorrencias')} className="menu-link">Ocorrencias</button>
+                <button onClick={() => handleNavigate('/Formulas')} className="menu-link">Formulas</button>
               </li>
               <li>
                 <FaBook />
