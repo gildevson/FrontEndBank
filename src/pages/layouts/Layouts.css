@@ -10,6 +10,15 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Título */
+.layouts-content h2 {
+  color: #00aaff; /* Cor azul moderna */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* Barra de pesquisa */
 .search-bar {
   display: flex;
@@ -54,7 +63,7 @@
 
 .layouts-table th {
   background-color: #2d2d2d;
-  color: #00aaff; /* Um tom azul para um visual mais moderno */
+  color: #00aaff;
   font-weight: bold;
 }
 
@@ -84,7 +93,7 @@
 }
 
 .download-link:hover {
-  background-color: #008ecc; /* Um tom de azul mais escuro no hover */
+  background-color: #008ecc;
 }
 
 /* Ajuste adicional para o layout */
@@ -108,6 +117,10 @@
 
   .download-link {
     padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .search-bar input {
     font-size: 0.9rem;
   }
 }
