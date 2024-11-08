@@ -103,7 +103,7 @@ const Menu = () => {
               )}
               <li>
                 <FaRuler />
-                <button onClick={() => handleNavigate('/verificadores')} className="menu-link">verificadores</button>
+                <button onClick={() => handleNavigate('/Validadores')} className="menu-link">Validadores</button>
               </li>
 
             </ul>
