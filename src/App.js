@@ -69,6 +69,16 @@ function App() {
                     }
                 />
                 <Route
+                    path="/formula"
+                    element={
+                        <PrivateRoute>
+                            <Layout>
+                                <Home />
+                            </Layout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
                     path="/layouts"
                     element={
                         <PrivateRoute>
